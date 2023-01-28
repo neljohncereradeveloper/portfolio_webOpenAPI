@@ -1,0 +1,45 @@
+@host = http://localhost:3001/api
+
+#########
+######### Search persons
+######### 
+GET {{host}}/persons
+content-type: application/json
+
+#########
+######### Search person by id
+######### 
+GET {{host}}/persons/lFawYcUeos
+content-type: application/json
+
+#########
+######### Create person
+######### 
+POST {{host}}/persons
+content-type: application/json
+
+{
+      "firstname": "Marco",
+      "middlename": "N",
+      "lastname": "Polo",
+      "email": "marco@gmail.com"
+}
+
+#########
+######### Update person
+######### 
+PUT {{host}}/persons/1
+content-type: application/json
+
+{
+      "firstname": "Marco",
+      "middlename": "N",
+      "lastname": "Polo",
+      "email": "marco@gmail.com"
+}
+
+#########
+######### Delete person
+######### 
+DELETE {{host}}/persons/1
+content-type: application/json
